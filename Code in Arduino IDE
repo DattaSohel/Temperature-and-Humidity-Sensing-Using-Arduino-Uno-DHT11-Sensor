@@ -1,0 +1,48 @@
+Code in Ardunio IDE: 
+
+#include <DHT.h>
+
+// Define the DHT sensor type and pin
+#define DHTTYPE DHT11   // DHT 11 sensor type
+#define DHTPIN 2        // Digital pin connected to the DHT11
+
+// Initialize the DHT sensor
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600); // Start the serial communication
+  Serial.println("DHT11 Temperature and Humidity Sensor");
+
+  dht.begin(); // Initialize the DHT sensor
+}
+
+void loop() {
+  // Wait a few seconds between measurements
+  delay(2000);
+
+  // Read temperature as Celsius and Fahrenheit
+  float tempC = dht.readTemperature();
+  float tempF = dht.readTemperature(true);
+
+  // Read humidity
+  float humidity = dht.readHumidity();
+
+  // Check if the readings are valid
+  if (isnan(tempC) || isnan(tempF) || isnan(humidity)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+
+  // Print the results to the Serial Monitor
+  Serial.print("Humidity: ");
+  Serial.print(humidity);
+  Serial.print(" %\t");
+
+  Serial.print("Temperature: ");
+  Serial.print(tempC);
+  Serial.print(" °C ");
+  Serial.print("(");
+  Serial.print(tempF);
+  Serial.print(" °F)");
+  Serial.println();
+}
