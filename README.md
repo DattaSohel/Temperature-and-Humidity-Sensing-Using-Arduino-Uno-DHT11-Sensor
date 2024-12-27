@@ -10,3 +10,15 @@ The DHT11 sensor is a low-cost digital sensor that accurately measures temperatu
 It features a built-in capacitive humidity sensor and a thermistor for temperature sensing. 
 
 The sensor is connected to the Arduino microcontroller using digital communication protocols.
+
+**Components Required**
+<hr>
+<br>
+
+1. Arduino Uno: The microcontroller that will process the data from the DHT11 sensor.
+
+2. DHT11 Sensor: A digital sensor capable of measuring temperature in the range of 0°C to 50°C with an accuracy of ±2°C, and humidity from 20% to 80% with an accuracy of ±5% RH.
+
+3. Jumper Wires: For connecting the DHT11 sensor to the Arduino.
+
+4. Breadboard (optional): For organizing connections.
