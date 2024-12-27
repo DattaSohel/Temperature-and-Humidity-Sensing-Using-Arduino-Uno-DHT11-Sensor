@@ -22,3 +22,14 @@ The sensor is connected to the Arduino microcontroller using digital communicati
 3. Jumper Wires: For connecting the DHT11 sensor to the Arduino.
 
 4. Breadboard (optional): For organizing connections.
+
+**Setting up Arduino with DHT11:**
+<hr>
+
+DHT11 pin-1 is connected to 5v power supply pin on Arduino Uno
+DHT11 pin-2 is connected to digital pin-A0 on Arduino Uno
+DHT11 pin-3 is NC
+DHT11 pin-4 is connected to GND (Ground) pin on Arduino Uno
+
+<img height = 100 src = "https://pijaeducation.com/wp-content/uploads/2020/03/DHT11.png"> 
+
